@@ -1,6 +1,7 @@
 import Router from 'koa-router';
+import login from './login';
 
-const controllers = [];
+const controllers = [login];
 
 export default (container) => {
   const router = new Router();

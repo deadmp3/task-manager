@@ -1,6 +1,6 @@
 {
   "development": {
-    "storage": "./db.development.sqlite",
+    "storage": "./assets/db/task-manager.sqlite",
     "dialect": "sqlite"
   },
   "test": {

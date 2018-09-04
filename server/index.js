@@ -6,8 +6,8 @@ import http from 'http';
 import addRoutes from './routes';
 import getContainer from './container';
 //import rollbar from './middlewares/rollbar';
-//import token from './middlewares/token';
-//import access from './middlewares/access';
+import token from './middlewares/token';
+import access from './middlewares/access';
 import serve from './middlewares/serve';
 import getPug from './middlewares/pug';
 //import socket from './socket';
@@ -17,8 +17,8 @@ export default async () => {
 
   app.use(bodyParser());
   //app.use(rollbar());
-  //app.use(token());
-  //app.use(access());
+  app.use(token());
+  app.use(access());
   app.use(await serve());
   app.use(koaLogger());
 

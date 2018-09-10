@@ -1,6 +1,6 @@
 {
   "name": "task-manager",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Issue tracking tool",
   "main": "dist/bin/task-manager.js",
   "scripts": {
@@ -43,7 +43,8 @@
     "@babel/polyfill": "*",
     "@babel/preset-env": "*",
     "@babel/preset-react": "*",
-    "@babel/preset-stage-0": "*",
+    "@babel/plugin-proposal-decorators": "*",
+    "@babel/plugin-proposal-class-properties": "*",
     "koa": "*",
     "koa-bodyparser": "*",
     "koa-logger": "*",

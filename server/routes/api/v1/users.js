@@ -21,7 +21,7 @@ export default (router, { io, buildFormErrors, User }) => {
         const data = { user: pick(user, attributes) };
         ctx.body = data;
         ctx.status = 201;
-        io.emit('createUser', data);
+        //io.emit('createUser', data);
       } catch (err) {
         console.log(err);
         ctx.body = { formErrors: buildFormErrors(err) };
@@ -47,7 +47,7 @@ export default (router, { io, buildFormErrors, User }) => {
         await user.update(attr);
         ctx.status = 204;
         const data = { user: pick(user, attributes) };
-        io.emit('updateUser', data);
+        //io.emit('updateUser', data);
       } catch (err) {
         console.log(err);
         ctx.body = { formErrors: buildFormErrors(err) };
@@ -61,7 +61,7 @@ export default (router, { io, buildFormErrors, User }) => {
       try {
         await user.destroy();
         ctx.status = 204;
-        io.emit('removeUser', id);
+        //io.emit('removeUser', id);
       } catch (err) {
         console.log(err);
         ctx.status = 422;

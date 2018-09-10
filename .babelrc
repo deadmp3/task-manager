@@ -1,9 +1,13 @@
 {
-  presets: [
+  "presets": [
     ["@babel/env", {
       "targets": { "node": "current" },
       "ignoreBrowserslistConfig": true
     }],
     "@babel/react"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }]
   ]
 }

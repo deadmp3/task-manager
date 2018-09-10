@@ -8,13 +8,13 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
 import reducers from './reducers';
-//import { initToken } from './lib/token';
+import { initToken } from './lib/token';
 import getPreloadedState from './lib/preloadedState';
 //import addSocketHandlers from './socket';
 import App from './components/App';
 
 const run = async () => {
-  //await initToken();
+  await initToken();
 
   const ext = window.__REDUX_DEVTOOLS_EXTENSION__; // eslint-disable-line
   const devtoolMiddleware = ext ? ext() : noop => noop;

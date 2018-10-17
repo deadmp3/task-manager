@@ -2,13 +2,14 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { SignIn } from './auth';
 import { Home } from './home';
-import { CreateUser, Users } from './users';
+import { CreateUser, Users, ViewUser } from './users';
 import { NotFound } from './notFound';
 
 const renderRoutes = (isAuthenticated) => {
   if (isAuthenticated) {
     return [
       <Route key="users" exact path="/users" component={Users} />,
+      <Route key="ViewUser" exact path="/users/:id" component={ViewUser} />,
     ];
   }
   return [

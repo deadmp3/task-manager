@@ -1,6 +1,6 @@
 {
   "name": "task-manager",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Issue tracking tool",
   "main": "dist/bin/task-manager.js",
   "scripts": {
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/deadmp3/task-manager#readme",
   "dependencies": {
-    "babel-loader": "^8.0.0-beta.4",
+    "babel-loader": "*",
     "@babel/cli": "*",
     "@babel/core": "*",
     "@babel/node": "*",

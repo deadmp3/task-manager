@@ -12,6 +12,7 @@ const makeUrl = (paths, query = {}) => {
 };
 
 export default {
+  loginUrl: () => makeUrl('login'),
   tokenUrl: () => makeUrl('login/token'),
   usersUrl: () => makeUrl('users'),
   userUrl: id => makeUrl(['users', id]),

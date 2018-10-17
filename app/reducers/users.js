@@ -37,3 +37,21 @@ export const users = handleActions({
     return keyBy(u, 'id');
   },
 }, {});
+
+export const viewUserFetchingState = handleActions({
+  [actions.fetchViewUserRequest]() {
+    return 'requested';
+  },
+  [actions.fetchViewUserSuccess]() {
+    return 'successed';
+  },
+  [actions.fetchViewUserFailure]() {
+    return 'failed';
+  },
+}, 'none');
+
+export const viewUser = handleActions({
+  [actions.fetchViewUserSuccess](state, { payload: { user: u } }) {
+    return u;
+  },
+}, null);
